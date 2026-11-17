@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Semantics Cybernetics LLP – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#120a06;--ink:#F6E4D0;--mute:#c9b8a6;--red:#EF4823;--org:#F18721;--cream:#F6E4D0;--char:#1F1F1F;--line:rgba(246,228,208,.2);color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120a06}}
+:root[data-theme="dark"]{--bg:#120a06}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}a:focus-visible{outline:3px solid var(--org);outline-offset:3px}
+.bar{position:fixed;top:0;right:0;bottom:0;width:14px;background:linear-gradient(var(--red) 33.3%,#F6E4D0 33.3% 66.6%,var(--org) 66.6%);z-index:5}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,72px);padding-right:calc(clamp(20px,5vw,72px) + 14px)}
+h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.05;margin:0}
+h2{font-size:clamp(34px,5vw,60px);margin-bottom:12px}
+.lead{max-width:52ch;color:var(--mute);margin:0 0 44px}
+section{padding:88px 0}
+.dots{background-image:radial-gradient(rgba(246,228,208,.14) 1px,transparent 1.5px);background-size:22px 22px}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse 60% 70% at 78% 55%,rgba(239,72,35,.55),rgba(241,135,33,.18) 45%,transparent 70%),radial-gradient(ellipse 40% 40% at 10% 100%,rgba(241,135,33,.25),transparent 70%),var(--bg);padding:0}
+nav{display:flex;align-items:center;justify-content:space-between;padding:26px 0}
+nav .l{display:flex;align-items:center;gap:12px;font-weight:500}nav svg{width:38px;height:auto}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:14px 26px;text-decoration:none;font-weight:500;border-radius:999px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--org);transform:translateY(-2px)}
+.btn.o{background:transparent;border:1.5px solid var(--cream);color:var(--cream)}.btn.o:hover{background:var(--cream);color:var(--char)}
+.hg{display:grid;grid-template-columns:1.15fr 1fr;gap:32px;align-items:center;min-height:calc(100vh - 100px);padding:24px 0 72px}
+h1{font-size:clamp(50px,8vw,112px);background:linear-gradient(100deg,#F6E4D0 10%,#F18721 55%,#EF4823);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{max-width:44ch;font-size:19px;color:var(--cream);margin:28px 0 34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.rings-svg{width:100%;height:auto;filter:drop-shadow(0 0 36px rgba(241,135,33,.55))}
+.hero .rings-svg{max-width:520px;justify-self:center;animation:float 6s ease-in-out infinite}
+.ra,.rb{transform-origin:200px 200px}
+.ra{animation:spin 22s linear infinite}.rb{animation:spin 16s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-16px)}}
+.in{opacity:0;transform:translateY(22px);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
+.in:nth-child(2){animation-delay:.15s}.in:nth-child(3){animation-delay:.3s}
+@keyframes up{to{opacity:1;transform:none}}
+/* services */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.sv{grid-column:span 2;min-height:270px;border-radius:24px;padding:28px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;transition:transform .3s}
+.sv:hover{transform:translateY(-6px)}
+.sv:nth-child(-n+2){grid-column:span 3}
+.sv::after{content:"";position:absolute;right:-60px;bottom:-60px;width:200px;height:200px;border-radius:50%;background:currentColor;opacity:.08;transition:transform .5s}
+.sv:hover::after{transform:scale(1.5)}
+.sv h3{font-size:clamp(26px,3vw,34px);margin-bottom:8px}.sv p{margin:0;max-width:34ch;font-size:16px;opacity:.9}
+.ic{width:52px;height:52px;transition:transform .4s}.sv:hover .ic{transform:rotate(-8deg) scale(1.15)}
+.s1{background:linear-gradient(135deg,#EF4823,#b82a0c);color:#fff}
+.s2{background:linear-gradient(135deg,#F18721,#EF4823);color:var(--char)}
+.s3{background:var(--cream);color:var(--char)}
+.s4{background:linear-gradient(160deg,rgba(246,228,208,.14),rgba(246,228,208,.04));border:1px solid var(--line);color:var(--cream)}
+.s5{background:linear-gradient(135deg,#F6E4D0,#F18721);color:var(--char)}
+/* work – unchanged look */
+#work{--bg:#F6E4D0;--ink:#1F1F1F;--mute:#5b534b;--line:rgba(31,31,31,.18);--tile:#1F1F1F;--tileink:#F6E4D0;background:var(--bg);color:var(--ink)}
+#work h2{margin-bottom:36px}
+.work{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.w{grid-column:span 2;min-height:230px;background:var(--tile);color:var(--tileink);padding:22px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;position:relative;overflow:hidden;transition:transform .2s}
+.w:hover{transform:translateY(-4px)}
+.w b{font:400 clamp(30px,4vw,46px)/1 "DM Serif Display",serif}
+.w span{font-size:14px;opacity:.75;word-break:break-all}
+.w i{position:absolute;right:-10px;top:-34px;font:normal 130px/1 "DM Serif Display",serif;color:var(--red);opacity:.9}
+.w:nth-child(2n) i{color:var(--org)}
+.w small{font-size:13px;color:var(--org);font-weight:500}
+/* process */
+.process{background:radial-gradient(ellipse 55% 60% at 50% 58%,#8a3008 0%,#2a0f05 55%,#0e0705 85%)}
+.process .wrap{text-align:center}.process .lead{margin-left:auto;margin-right:auto}
+.proc{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px 0;text-align:left;align-items:start}
+.pc{padding:26px;border-radius:20px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.03));backdrop-filter:blur(8px);max-width:320px;position:relative}
+.pc em{display:block;text-align:right;font:italic 400 44px/1 "DM Serif Display",serif;color:var(--red)}
+.pc h3{font:500 17px/1.3 Inter,sans-serif;letter-spacing:.02em;margin:14px 0 6px;color:#fff}
+.pc p{margin:0;font-size:15px;color:var(--mute)}
+.p1{grid-area:1/1;margin-top:30px}.p2{grid-area:1/3;justify-self:end}.p3{grid-area:2/1;margin-top:60px}.p4{grid-area:2/3;justify-self:end;margin-top:20px}
+.pr{grid-area:1/2/3/3;align-self:center}.pr .rings-svg{max-width:340px;margin:auto;display:block;animation:float 7s ease-in-out infinite}
+/* contact */
+.contact{background:#000;color:#fff}
+.cg{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.contact h2{font-size:clamp(40px,6vw,76px)}.contact p{margin:0 0 6px;font:500 19px/1.6 Inter,system-ui,sans-serif;color:var(--cream)}
+.contact .btn{background:var(--red);color:#fff;margin-top:18px}.contact .btn:hover{background:var(--org)}
+footer{padding:26px 0 44px;background:#000;color:var(--mute);font-size:14px}
+@media (max-width:820px){.hg,.cg{grid-template-columns:1fr}.hg{min-height:auto}.hero .rings-svg{max-width:280px;order:-1}
+.bento,.work{grid-template-columns:1fr}.sv,.sv:nth-child(n){grid-column:auto;min-height:220px}.w,.w:nth-child(n){grid-column:auto;min-height:170px}
+.proc{grid-template-columns:1fr}.pc,.pc:nth-child(n){grid-area:auto;margin:0;max-width:none;justify-self:stretch}.pr{grid-area:auto;order:-1}.pr .rings-svg{max-width:220px}section{padding:64px 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.in{opacity:1;transform:none}}
+</style></head><body>
+<div class="bar" aria-hidden="true"></div>
+<header class="hero dots"><div class="wrap">
+<nav><div class="l"><svg role="img" aria-label="Semantics Cybernetics logo" viewBox="0 0 487 438" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M206.172 78.0592C164.726 60.2562 126.991 63.5382 95.3752 95.0358C63.9013 126.392 61.7747 163.981 78.0078 204.357H2.25316C-5.70982 125.825 11.9174 60.2326 86.7978 18.8417C120.895 -0.000174789 157.85 -4.34468 196.271 4.17905C201.399 5.31239 203.88 5.92629 205.108 7.50826C205.605 8.14576 206.006 8.92494 206.077 9.98746C206.172 11.5458 206.361 13.6944 206.408 16.7167C206.786 36.6211 206.195 56.5492 206.195 78.0592H206.172Z" fill="#EF4823"/>
+<path d="M0.33903 355.611C41.7843 373.414 79.5199 370.132 111.136 338.635C142.609 307.279 144.736 269.689 128.503 229.314H204.258C212.221 307.822 194.593 373.414 119.737 414.805C85.6398 433.647 48.6604 437.991 10.2632 429.491C5.13572 428.358 2.65467 427.744 1.42597 426.162C0.929756 425.525 0.528062 424.745 0.457175 423.683C0.362659 422.125 0.173627 419.976 0.126369 416.954C-0.251696 397.049 0.33903 377.121 0.33903 355.611Z" fill="#EF4823"/>
+<path d="M206.171 204.9C176.068 204.9 147.453 205.042 118.839 204.664C116.168 204.617 112.482 201.76 111.065 199.21C89.8693 161.549 112.719 107.385 153.88 97.6569C170.208 93.8083 185.921 96.6652 200.524 104.457C203.265 105.921 205.911 110.407 205.959 113.547C206.36 143.345 206.195 173.143 206.195 204.924L206.171 204.9Z" fill="#F18721"/>
+<path d="M335.802 213.258C335.802 293.844 401.16 359.177 481.806 359.177C483.413 359.177 485.043 359.177 486.626 359.082V437.708C365.669 437.708 267.609 339.721 267.609 218.854C267.609 97.9874 365.669 0 486.626 0V67.4578C485.043 67.387 483.413 67.3634 481.806 67.3634C401.16 67.3634 335.802 132.696 335.802 213.258Z" fill="var(--ink)"/>
+<path d="M486.609 100V324C424.751 324 374.609 273.863 374.609 212.012C374.609 150.16 424.751 100 486.609 100Z" fill="#F18721"/>
+</svg>Semantics Cybernetics LLP</div><a class="btn o" href="#contact">Contact</a></nav>
+<div class="hg"><div>
+<h1 class="in">Unleash the power of your brand</h1>
+<p class="sub in">Semantics Cybernetics helps your business shine with bold strategies and creative solutions, turning potential into success.</p>
+<div class="cta in"><a class="btn" href="#work">See our work</a><a class="btn o" href="#services">What we do</a></div>
+</div><svg class="rings-svg" viewBox="0 0 400 400" aria-hidden="true"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EF4823"/><stop offset=".5" stop-color="#F18721"/><stop offset="1" stop-color="#F6E4D0"/></linearGradient><linearGradient id="h1" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6E4D0"/><stop offset=".6" stop-color="#F18721"/><stop offset="1" stop-color="#EF4823"/></linearGradient></defs><circle cx="200" cy="200" r="90" fill="#F18721" opacity=".18"/><g class="ra"><ellipse cx="200" cy="200" rx="150" ry="66" stroke="url(#g1)" stroke-width="18" fill="none" transform="rotate(-32 200 200)"/><ellipse cx="200" cy="200" rx="150" ry="66" stroke="#F6E4D0" stroke-opacity=".5" stroke-width="3" fill="none" transform="rotate(-32 200 200)"/></g><g class="rb"><ellipse cx="200" cy="200" rx="110" ry="48" stroke="url(#h1)" stroke-width="12" fill="none" transform="rotate(28 200 200)"/></g></svg></div></div></header>
+
+<section id="services"><div class="wrap">
+<h2>What we do</h2>
+<p class="lead">Everything your brand needs online, from the first design to hosting and discoverability, under one roof.</p>
+<div class="bento">
+<div class="sv s1"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="9" width="38" height="30" rx="4"/><path d="M5 17h38M20 25l-5 4 5 4M28 25l5 4-5 4"/></svg><div><h3>Web design &amp; development</h3><p>Fast, easy-to-use websites and online stores built to turn visitors into customers.</p></div></div>
+<div class="sv s2"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 5l15 6v11c0 10-6 17-15 21C15 39 9 32 9 22V11z"/><rect x="18" y="21" width="12" height="9" rx="2"/><path d="M21 21v-3a3 3 0 016 0v3"/></svg><div><h3>Cybersecurity solutions</h3><p>Security testing and hardening, so your site and your customers’ data stay protected.</p></div></div>
+<div class="sv s3"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 5l17 9v20l-17 9-17-9V14z"/><path d="M7 14l17 9 17-9M24 23v20"/></svg><div><h3>Product packaging</h3><p>Packaging design that carries your brand from shelf to customer.</p></div></div>
+<div class="sv s4"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="8" width="34" height="12" rx="3"/><rect x="7" y="28" width="34" height="12" rx="3"/><path d="M13 14h.01M13 34h.01M20 14h14M20 34h14"/></svg><div><h3>Hosting solutions</h3><p>Reliable, secure hosting for the sites we build, with one team to call.</p></div></div>
+<div class="sv s5"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="5"/><circle cx="8" cy="12" r="3"/><circle cx="40" cy="12" r="3"/><circle cx="8" cy="38" r="3"/><circle cx="40" cy="38" r="3"/><path d="M10 14l10 7M38 14l-10 7M10 36l10-8M38 36l-10-8"/></svg><div><h3>AI indexing</h3><p>Structuring your site so AI search tools can find, understand and recommend you.</p></div></div>
+</div></div></section>
+
+<section id="work"><div class="wrap">
+<h2>Selected work</h2>
+<div class="work">
+<a class="w" href="https://farmfres.co/" target="_blank" rel="noopener"><i>F</i><small>Live website</small><div><b>Farmfres</b><br><span>farmfres.co</span></div></a>
+<a class="w" href="https://zofffoods.com/" target="_blank" rel="noopener"><i>Z</i><small>Live website</small><div><b>Zoff Foods</b><br><span>zofffoods.com</span></div></a>
+<a class="w" href="https://muspaces.in/" target="_blank" rel="noopener"><i>M</i><small>Live website</small><div><b>MU Spaces</b><br><span>muspaces.in</span></div></a>
+<a class="w" href="https://clients.secy.co.in/cctv/" target="_blank" rel="noopener"><i>C</i><small>Client project</small><div><b>CCTV</b><br><span>clients.secy.co.in/cctv</span></div></a>
+<a class="w" href="https://clients.secy.co.in/emo/" target="_blank" rel="noopener"><i>E</i><small>Client project</small><div><b>EMO</b><br><span>clients.secy.co.in/emo</span></div></a>
+<a class="w" href="https://clients.secy.co.in/sbpl/" target="_blank" rel="noopener"><i>S</i><small>Client project</small><div><b>SBPL</b><br><span>clients.secy.co.in/sbpl</span></div></a>
+<a class="w" href="https://clients.secy.co.in/indlay/" target="_blank" rel="noopener"><i>I</i><small>Client project</small><div><b>Indlay</b><br><span>clients.secy.co.in/indlay</span></div></a>
+<a class="w" href="https://gts.secy.co.in/" target="_blank" rel="noopener"><i>G</i><small>Client project</small><div><b>GTS</b><br><span>gts.secy.co.in</span></div></a>
+<a class="w" href="https://secyindia.github.io/nft-template/" target="_blank" rel="noopener"><i>N</i><small>Template demo</small><div><b>NFT Template</b><br><span>secyindia.github.io/nft-template</span></div></a>
+</div>
+</div></section>
+
+<section class="process dots"><div class="wrap">
+<h2>Our creative success process</h2>
+<p class="lead">Four steps from first conversation to a launch that performs.</p>
+<div class="proc">
+<div class="pc p1"><em>01</em><h3>Discover</h3><p>Understand your business, audience, objectives, and digital requirements.</p></div>
+<div class="pc p2"><em>02</em><h3>Strategise</h3><p>Create a clear roadmap aligned with your business goals.</p></div>
+<div class="pr"><svg class="rings-svg" viewBox="0 0 400 400" aria-hidden="true"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EF4823"/><stop offset=".5" stop-color="#F18721"/><stop offset="1" stop-color="#F6E4D0"/></linearGradient><linearGradient id="h2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6E4D0"/><stop offset=".6" stop-color="#F18721"/><stop offset="1" stop-color="#EF4823"/></linearGradient></defs><circle cx="200" cy="200" r="90" fill="#F18721" opacity=".18"/><g class="ra"><ellipse cx="200" cy="200" rx="150" ry="66" stroke="url(#g2)" stroke-width="18" fill="none" transform="rotate(-32 200 200)"/><ellipse cx="200" cy="200" rx="150" ry="66" stroke="#F6E4D0" stroke-opacity=".5" stroke-width="3" fill="none" transform="rotate(-32 200 200)"/></g><g class="rb"><ellipse cx="200" cy="200" rx="110" ry="48" stroke="url(#h2)" stroke-width="12" fill="none" transform="rotate(28 200 200)"/></g></svg></div>
+<div class="pc p3"><em>03</em><h3>Execute</h3><p>Transform strategy into secure, high-performing digital solutions.</p></div>
+<div class="pc p4"><em>04</em><h3>Deliver</h3><p>Launch, test, optimise, and ensure everything performs as expected.</p></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap cg">
+<div><h2>Let’s build yours.</h2><a class="btn" href="mailto:drashta@secy.co.in">Email us</a><p style="margin-top:22px">Built in INDIA for the WORLD</p></div>
+</div></section>
+<footer><div class="wrap">© Semantics Cybernetics LLP</div></footer>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');
+if(h.charAt(0)==='#'){var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}return;}
+if(/^https?:/i.test(h)){e.preventDefault();var w=null;try{w=window.open(h,'_blank');}catch(x){}if(w){try{w.opener=null;}catch(x){}}else{location.href=h;}}});
+</script>
+</body></html>
